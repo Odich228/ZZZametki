@@ -1,0 +1,46 @@
+# ===== Секреты =====
+.env
+.env.local
+*.pem
+*.key
+nginx/certs/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+env/
+.venv/
+
+# ===== Kivy / Buildozer =====
+.buildozer/
+bin/
+*.apk
+
+# ===== Docker =====
+*.log
+
+# ===== Тесты / покрытие =====
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== Базы данных (локальные) =====
+*.sqlite3
+*.db
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Terraform =====
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
