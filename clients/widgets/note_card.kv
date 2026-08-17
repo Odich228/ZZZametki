@@ -1,0 +1,28 @@
+#:kivy 2.3.0
+
+<NoteCard>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: dp(70)
+    padding: dp(10)
+    spacing: dp(4)
+
+    canvas.before:
+        Color:
+            rgba: 0.93, 0.93, 0.93, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: root.preview_text
+        text_size: self.width, None
+        halign: 'left'
+        valign: 'top'
+        color: 0, 0, 0, 1
+
+    Button:
+        text: 'Открыть'
+        size_hint_y: None
+        height: dp(24)
+        on_press: root.handle_press()
