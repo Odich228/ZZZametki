@@ -1,0 +1,43 @@
+#:kivy 2.3.0
+
+<NotesListScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            padding: dp(8)
+            spacing: dp(8)
+
+            Label:
+                text: 'Мои заметки'
+                font_size: '18sp'
+
+            Button:
+                text: 'Синк'
+                size_hint_x: None
+                width: dp(70)
+                on_press: root.sync_now()
+
+            Button:
+                text: '+ Новая'
+                size_hint_x: None
+                width: dp(90)
+                on_press: root.create_new_note()
+
+        Label:
+            id: sync_status
+            text: ''
+            size_hint_y: None
+            height: dp(20)
+            font_size: '12sp'
+            color: 0.4, 0.4, 0.4, 1
+
+        ScrollView:
+            BoxLayout:
+                id: notes_container
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: dp(4)
