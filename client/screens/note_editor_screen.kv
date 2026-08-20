@@ -1,0 +1,29 @@
+#:kivy 2.3.0
+
+<NoteEditorScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(8)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(44)
+            spacing: dp(8)
+
+            Button:
+                text: '< Назад'
+                size_hint_x: None
+                width: dp(90)
+                on_press: root.save_and_back()
+
+            Button:
+                text: 'Удалить'
+                size_hint_x: None
+                width: dp(90)
+                on_press: root.delete_note()
+
+        TextInput:
+            id: content_input
+            hint_text: 'Текст заметки...'
+            font_size: '16sp'
